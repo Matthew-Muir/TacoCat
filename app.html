@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Matthew Muir</title>
+    <title>TacoCat: A Coding Project By Matthew Muir</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,7 +24,7 @@
 <!--Nav Section-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand mt-1" style="font-family: 'Bebas Neue', cursive;"><img style="margin-right: 12px;" src="/img/whitefavicon.png" class="d-inline-block align-text-top" height="25">App Name</a>
+        <a class="navbar-brand mt-1" style="font-family: 'Bebas Neue', cursive;"><img style="margin-right: 12px;" src="/img/whitefavicon.png" class="d-inline-block align-text-top" height="25">TacoCat</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,34 @@
 </nav>
 <!--Main Section-->
 <main class="flex-shrink-0">
-    <div class="container mt-4"></div>
+    <div class="container mt-4">
+
+        <div class="row d-flex">
+
+            <div class="col-4 border-end border-2 border-dark">
+                <h1>TacoCat</h1>
+                <p>Enter a string and press Start to check if the string is a palindrome</p>
+            </div>
+               
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12 pt-2">
+                        <form class="row pb-3">
+                            <div class="col-6">
+                                <input type="text" id="textField" class="form-control" placeholder="TacoCat" onkeydown="return event.key != 'Enter';">
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-md btn-dark" type="button" id="btnSubmit">Start</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col invisible" id="result">
+                        <h2>This will need to be hidden</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
     <!--Footer Section-->
     <footer class="footer mt-auto py-3 sticky-footer bg-dark">
@@ -80,5 +107,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>document.getElementById("btnSubmit").addEventListener("click",CheckString);</script>
+    <script>document.getElementById("textField").addEventListener("click",Hide);</script>
 </body>
 </html>
